@@ -1,0 +1,27 @@
+{% load i18n cms_tags menu_tags sekizai_tags %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+<meta charset="utf-8" />
+<title>{% page_attribute page_title %}</title>
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/text.css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/960.css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/perso.css" />
+{% render_block "css" %}
+{% render_block "js" %}
+</head>
+<body id="{% block tpl_id %}none{% endblock %}" class="{{ LANGUAGE_CODE }}">
+{% cms_toolbar %}
+<div id="page" class="container_12">
+        <div id="header" class="grid_12">
+                <div id="logo" class="grid_3">
+                        <a href="/"><img src="{{ MEDIA_URL }}img/logo.jpg" title="Accueil" alt="Accueil"></a>
+                </div>
+                {% block haut %}{% endblock haut %}
+        </div>
+{% block content %}{% endblock content %}
+{% include "pied.html" %}
+</div>
+</body>
+</html>

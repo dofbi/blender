@@ -1,0 +1,27 @@
+{% extends "accueil.html" %}
+{% load i18n cms_tags %}
+
+{% block tpl_id %}tpl_col_three_accueil{% endblock %}
+
+{% block haut %}
+                <div id="chapo" class="grid_8">
+                </div>
+{% endblock %}
+
+{% block content %}
+{% include "menu.html" %}
+        <div id="corps" class="grid_12">
+                <div id="colone" class="alpha">
+                        <div id="zone1" class="cadre grid_3">
+                        <h1>T-Shirt</h1>
+                        <p>Rounder corners can be created independently using the four individual border-*-radius properties (border-bottom-left-radius, border-top-left-radius, etc.) or for all four corners simultaneously using the border-radius shorthand property.
+We will firstly deal with the syntax for the individual border-*-radius properties before looking at how the border-radius shorthand property works</p>
+                        <h7><a href="#">Lire la suite</a></h7>
+                </div>
+                </div>
+                <div id="contenu" class="grid_9 omega">
+                <p>Rounder corners can be created independently using the four individual border-*-radius properties (border-bottom-left-radius, border-top-left-radius, etc.) or for all four corners simultaneously using the border-radius shorthand property.
+We will firstly deal with the syntax for the individual border-*-radius properties before looking at how the border-radius shorthand property works</p>
+                </div>
+        </div>
+{% endblock %}

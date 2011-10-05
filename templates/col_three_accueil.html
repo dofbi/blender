@@ -1,0 +1,37 @@
+{% extends "accueil.html" %}
+{% load i18n cms_tags %}
+
+{% block tpl_id %}tpl_col_three_accueil{% endblock %}
+
+{% block haut %}
+                <div id="slide" class="grid_8">
+                </div>
+{% endblock %}
+
+{% block content %}
+<div id="corps" class="grid_12">
+                <div id="zone1" class="cadre grid_4">
+                        <h1><a href="/presentations">Présentation</a></h1>
+		{% block zone1 %}
+	    		{% placeholder zone1 %}
+		{% endblock %}
+		<h7><a href="#">Lire la suite</a></h7>
+    </div>
+	
+                <div id="zone2" class="cadre grid_4">
+                        <h1><a href="/ateliers">Ateliers</a></h1>
+		{% block zone2 %}
+				{% placeholder zone2 %}
+		{% endblock %}
+		<h7><a href="#">Lire la suite</a></h7>
+    </div>
+	
+                <div id="zone3" class="cadre grid_4">
+                        <h1><a href="/concours">Concours</a></h1>
+		{% block zone3 %}
+				{% placeholder zone3 %}
+		{% endblock %}
+		<h7><a href="#">Lire la suite</a></h7>
+    </div>
+</div>
+{% endblock %}
